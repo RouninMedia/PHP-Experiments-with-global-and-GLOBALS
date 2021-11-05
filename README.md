@@ -12,8 +12,11 @@ function myFunction($String, $Capsule) {
   // print_r($GLOBALS);
 
   // echo 'Function working';
+  
+  // PRINT CAPSULE
+  print_r($Capsule);
 
-
+  // global KEYWORD
   global ${'<'.$String.'>'};
   
   if (isset(${'<'.$String.'>'})) {
@@ -21,14 +24,11 @@ function myFunction($String, $Capsule) {
     print_r(${'<'.$String.'>'});
   }
 
-
+  // $GLOBALS SUPERGLOBAL
   if (isset($GLOBALS['<'.$String.'>'])) {
       
     print_r($GLOBALS['<'.$String.'>']);
   }
-
-  print_r($Capsule);
-
 }
 
 myFunction('My_Test', ${'<My_Test>'});
